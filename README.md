@@ -16,6 +16,7 @@
 ## Tasks and explanations
 1) User Registration: User can signUp as given below.
 
+```
 mutation createUser{
   createUser(
     input:{
@@ -29,18 +30,21 @@ mutation createUser{
     name
   }
 }
-
+```
 2) User can login using valid user credential and can generate token as given below.
 
+```
 mutation login{
   login(email: "sand@gmail.com", password: "qwert"){
     token,
     expired_at
   }
 }
+```
 
 3)If you want to access users, you have to provide an authorization header(token after login).
 
+```
 query users{
   users {
     name,
@@ -50,3 +54,4 @@ query users{
     updated_at
   } 
 }
+```
